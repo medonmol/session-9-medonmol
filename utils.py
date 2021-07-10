@@ -77,7 +77,7 @@ def generate_random_price():
     for _ in range(50):
         rand_int = randint(981, 1020) / 1000.0
         x *= rand_int
-        price.append(round(x))
+        price.append(round(float64(x)))
     return price
 
 
