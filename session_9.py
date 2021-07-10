@@ -8,7 +8,7 @@ from utils import (
     CustomException,
     validate_stock_datatype,
 )
-from numpy import mean, max, unique, argmax, sum
+from numpy import mean, max, unique, argmax, sum, float64
 from numpy.random import uniform
 
 
@@ -152,10 +152,10 @@ def generate_fake_data_stock_market():
                 company_name[i],
                 stock_name[i],
                 _price,
-                _price[0],
-                max(_price),
-                _price[-1],
-                company_weights[i],
+                float64(_price[0]),
+                float64(max(_price)),
+                float64(_price[-1]),
+                float64(company_weights[i]),
             )
         )
     return all_companies
