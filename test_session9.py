@@ -130,7 +130,7 @@ def test_stock_check_price_low(get_fake_stock_data):
 
 
 # 15
-def test_stock_check_incorrect_weight_input(get_fake_stock_data):
+def test_stock_check_empty_weight_input(get_fake_stock_data):
     with pytest.raises(
         CustomException,
         match="The length of weight and all_companies arrays should be the same",

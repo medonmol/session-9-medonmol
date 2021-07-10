@@ -104,7 +104,8 @@ def validate_stock_datatype(fn):
                 and isinstance(tup.close, (int, float, int32, float64))
                 and isinstance(tup.weight, (float, float64))
             ):
-
+                for f in range(len(tup._fields)):
+                    print(f"{tup[f]} -> {type(tup[f])}")
                 raise CustomException(f"incorrect datatype in namedtuple {tup}")
         return fn(*args, **kwargs)
 
